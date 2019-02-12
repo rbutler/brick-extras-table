@@ -1,3 +1,5 @@
+{-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
 module Brick.Extras.Table
 ( Table(..)
 , table
@@ -22,6 +24,7 @@ import qualified Data.Array as A
 import qualified Data.Ix as Ix
 import qualified Data.List as L
 import qualified Graphics.Vty as Vty
+import Brick.Widgets.Core
 
 -- | Table state. A table is a two-dimensional array of
 -- values as well as a cursor which is focuses on one of those values.
@@ -44,6 +47,9 @@ data Table e n = Table
     -- ^ The name of the table
   }
 
+instance Named (Table e n) n where
+  getName = tableName
+    
 type Idx = (Int, Int)
 type Range = (Idx, Idx)
 
