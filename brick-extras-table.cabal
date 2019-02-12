@@ -27,7 +27,7 @@ executable example
   hs-source-dirs:      example
   main-is:             Main.hs
   ghc-options:         -Wall -threaded
-  build-depends:       base >=4.7 && <4.10
+  build-depends:       base >=4.7 && <5
                      , brick
                      , vty
                      , brick-extras-table
