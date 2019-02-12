@@ -15,7 +15,7 @@ library
   exposed-modules:     Brick.Extras.Table
   hs-source-dirs:      src
   ghc-options:         -Wall
-  build-depends:       base >=4.7 && <4.10
+  build-depends:       base >=4.7 && <5
                      , brick
                      , vty
                      , array
